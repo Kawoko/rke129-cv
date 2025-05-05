@@ -219,3 +219,73 @@ footer {
         font-size: 1.8em;
     }
 }
+
+/* Carousel Styles */
+
+.profile-carousel {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-carousel .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.profile-carousel .carousel-image {
+    display: none;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-carousel .carousel-image.active {
+    display: block;
+}
+
+.profile-carousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffffdd;
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+
+.profile-carousel .carousel-btn.left {
+    left: -10px;
+}
+
+.profile-carousel .carousel-btn.right {
+    right: -10px;
+}
+
+.profile-carousel .carousel-btn:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Adjust on smaller screens */
+@media (max-width: 480px) {
+    .profile-carousel {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-carousel .carousel-image {
+        width: 120px;
+        height: 120px;
+    }
+}
